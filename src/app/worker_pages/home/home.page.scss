@@ -1,0 +1,49 @@
+
+ion-avatar{
+  width: 50px;
+  height: 50px;
+}
+
+ion-col{
+ display: grid;
+ text-align: center;
+ justify-content: center;
+}
+
+ion-card-content{
+  -webkit-padding-start:6px;
+  -webkit-padding-end:6px;
+  padding-inline-start:6px;
+  padding-inline-end:6px;
+}
+
+ion-card{
+  -webkit-margin-start:7px;
+  -webkit-margin-end:7px;
+  margin-inline-start:7px;
+  margin-inline-end :7px;
+}
+
+#customerDiv{
+  div{
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    width: 33.33%;
+  }
+}
+
+#workerDiv{
+  div{
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    width: 33.33%;
+  }
+}

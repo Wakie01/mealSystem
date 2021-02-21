@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>结账</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title id="billInfoTitle">5号桌</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid id="billInfoGrid">
+        <ion-row style="font-weight: bold;padding: 3px 0px;">
+          <ion-col>菜名</ion-col>
+          <ion-col>数量</ion-col>
+          <ion-col>单价</ion-col>
+          <ion-col>总价</ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+
+        <!-- <ion-row>
+          <ion-col>大良双皮奶 </ion-col>
+          <ion-col> 1</ion-col>
+          <ion-col>12</ion-col>
+          <ion-col>12</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>炸牛奶</ion-col>
+          <ion-col>2</ion-col>
+          <ion-col>6 </ion-col>
+          <ion-col>12</ion-col>
+        </ion-row> -->
+
+        <ion-row style="padding:20px 0px;">
+          <ion-col>空空如也，快去点菜吧~~~</ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+      <div id="serveInfoDiv" style="float: right; margin-bottom: 10px;" hidden>
+        <ion-button fill="clear">
+          <ion-label>查看账单</ion-label>
+          <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      总价：
+      <ion-label>￥{{totalPrice}}</ion-label>
+    </ion-title>
+    <ion-button slot="end" shape="round" style="margin-right: 15px;" (click)="payBill()">支付</ion-button>
+  </ion-toolbar>
+</ion-footer>

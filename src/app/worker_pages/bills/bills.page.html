@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>账单</ion-title>
+    <ion-chip color="primary" slot="end" style="margin-right: 10px;" [routerLink]="['/history-bills']">
+      <ion-icon name="receipt-outline"></ion-icon>
+      <ion-label>历史账单</ion-label>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refreshBills($event)">
+    <ion-refresher-content pullingText="下拉刷新">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div style="text-align: center;background-color:#fff8f0 ;">
+    <p id="notifyP" style="padding: 4px 0px; margin: 0px 0px; color: #be1717;">目前餐厅有6桌人用餐</p>
+  </div>
+
+  <ion-card style="height: 91%;">
+    <ion-card-header>
+      <ion-card-title>当前账单</ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content style="height: 90%; overflow-y: scroll;">
+        <ion-grid id="billGrid">
+          <ion-row>
+            <ion-col style="font-weight: bold;">单号</ion-col>
+            <ion-col style="font-weight: bold;">桌号</ion-col>
+            <ion-col style="font-weight: bold;">时间</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col><a [routerLink]="['/tabs/menus']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col>11:30</ion-col>
+          </ion-row>
+        </ion-grid>
+
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<!-- <ion-footer>
+  <ion-toolbar style="text-align: center; padding: 6px 0px;">
+    <ion-button shape="round" style="margin-right: 20px; height: 41px;">
+      <ion-label>当前账单</ion-label>
+    </ion-button>
+    <ion-button shape="round" style="margin-left: 20px; height: 41px;">
+      <ion-label>历史账单</ion-label>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer> -->

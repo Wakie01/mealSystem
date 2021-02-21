@@ -1,0 +1,25 @@
+.acotContent{
+    ion-item{
+      ion-icon{
+        margin-top: 20px;
+      }
+    }
+  
+    .forgetPassDiv{
+      text-align: center;
+      margin-top: 18px;
+    }
+  
+    .btnDiv{
+      text-align: center;
+      ion-button{
+        margin-top: 40px;
+        width: 230px;
+        height: 40px;
+        p{
+          font-size: 18px;
+        }
+      }
+      
+    }
+  }

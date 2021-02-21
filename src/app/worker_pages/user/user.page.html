@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>我的</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding acotContent">
+  <div style="display: flex; justify-content: center;margin-top: 40px;">
+    <ion-avatar style="width: 80px; height: 80px;">
+      <img src="../../assets/icon/admin.jpg" />
+    </ion-avatar>
+  </div>
+
+  <div style="text-align: center;margin-top: 25px;">
+    <ion-label style="font-size: 25px; font-weight: 549;">{{acot}}</ion-label>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <ion-label style="display: block;color:#8d8d8d; margin:3px 0px;">打工人，打工魂</ion-label>
+    <ion-label style="display: block;color:#8d8d8d; margin:3px 0px;">打工都是人上人</ion-label>
+    <ion-label style="display: block;color:#8d8d8d; margin:3px 0px;">加油！打工人</ion-label>
+  </div>
+
+  <div class="btnDiv">
+    <ion-button style="margin-top: 60px;" shape="round" color="secondary" fill="outline" (click)="logout()">
+      <p>注销账号</p>
+    </ion-button>
+  </div>
+</ion-content>

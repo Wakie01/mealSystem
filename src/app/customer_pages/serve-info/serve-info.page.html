@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ng-container *ngIf="userType==0">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/bills"></ion-back-button>
+      </ion-buttons>
+    </ng-container>    
+    <ng-container *ngIf="userType==1">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/bill-info"></ion-back-button>
+      </ion-buttons>
+    </ng-container>    
+    <ion-title id="title_si">上菜情况</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refreshServeInfo($event)">
+    <ion-refresher-content pullingText="下拉刷新">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+    <ion-card-header style="padding-bottom: 10px;">
+      <ion-card-title id="deskTitle">5号桌</ion-card-title>
+      <ion-card-subtitle id="billIdTitle">
+        <p style="margin-bottom: 5px; margin-left: 10px;">单号：101112</p>
+        <p style="margin-bottom: 0px; margin-left: 10px; margin-top: 5px;">时间：2021-01-29 14:58:21</p>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid id="serveInfoGrid">
+        <ion-row style="font-weight: bold; margin-bottom: 2px;">
+          <ion-col>菜名</ion-col>
+          <ion-col>数量</ion-col>
+          <ion-col>价钱</ion-col>
+          <ion-col>上菜</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>大良双皮奶</ion-col>
+          <ion-col>1</ion-col>
+          <ion-col>￥1</ion-col>
+          <ion-col>
+            <ion-checkbox checked="true" disabled="true"></ion-checkbox>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <div style="float: right; margin: 16px 15px;">
+        <p style="float: left; font-size: 18px; font-weight: bold;">总价：</p>
+        <p id="totalPriceP" style="color: red; font-weight: bold; font-size: 18px; float: right;">￥310</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer id="footer_si">
+  <ion-toolbar style="text-align: center; padding: 3px 0px;">
+    <ng-container *ngIf="userType==0;">
+      <ion-button (click)="finishBill()">
+        <ion-label>完成上菜</ion-label>
+      </ion-button>
+    </ng-container>
+
+    <ng-container *ngIf="userType==1;">
+      <ion-button (click)="finishMeal()">
+      <ion-label>结束用餐</ion-label>
+    </ion-button>
+    </ng-container>
+    
+  </ion-toolbar>
+</ion-footer>

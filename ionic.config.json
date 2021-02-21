@@ -1,0 +1,7 @@
+{
+  "name": "mealSystem",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

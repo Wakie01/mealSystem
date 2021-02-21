@@ -1,0 +1,46 @@
+<ion-tabs>
+
+  <ng-container *ngIf="userType==2; else notViewerTemplate">
+    <!-- viewer 视图 -->
+
+  </ng-container>
+  <ng-template #notViewerTemplate>
+
+    <ion-tab-bar slot="bottom">
+      <ng-container *ngIf="userType==0;">
+
+        <ion-tab-button tab="menus">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>菜单</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="bills">
+          <ion-icon name="receipt-outline"></ion-icon>
+          <ion-label>账单</ion-label>
+          <ng-container *ngIf="billNum!=0; ">
+            <ion-badge color="danger">{{billNum}}</ion-badge>
+          </ng-container>
+        </ion-tab-button>
+        <ion-tab-button tab="user">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label>我的</ion-label>
+        </ion-tab-button>
+      </ng-container>
+
+      <ng-container *ngIf="userType==1;">
+
+        <ion-tab-button tab="menus">
+          <ion-icon name="book-outline"></ion-icon>
+          <ion-label>菜单</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="bill-info">
+          <ion-icon name="receipt-outline"></ion-icon>
+          <ion-label>结账</ion-label>
+          <ion-badge color="danger">6</ion-badge>
+        </ion-tab-button>
+      </ng-container>
+
+    </ion-tab-bar>
+
+  </ng-template>
+
+</ion-tabs>

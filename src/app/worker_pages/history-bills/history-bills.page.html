@@ -1,0 +1,176 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/bills"></ion-back-button>
+    </ion-buttons>
+    <ion-title>历史账单</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item id="timeItem" style="padding-top: 2px;" (click)="timeItemToggle()">
+    时间
+    <ion-label id="startLabel" slot="end" style="overflow: unset;" hidden>
+      <p id="startP" style="margin-bottom: 0px;">始：2020-03-12</p>
+    </ion-label>
+    <ion-label id="endLabel" slot="end" style="overflow: unset;" hidden>
+      <p id="endP" style="margin-bottom: 0px;">止：2020-03-21</p>
+    </ion-label>
+  </ion-item>
+  <div id="timeCard">
+    <ion-card>
+      <ion-card-header style="height: 45px;">
+        <ion-card-subtitle>时间选择</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content style="text-align: center;">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-datetime #startTime placeholder="开始" done-text="选择" cancel-text="取消"
+              monthShortNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"></ion-datetime>
+            </ion-col>
+            <ion-col>
+              <div style="height:100%; align-items:center; justify-content:center; display:flex;">
+                <div style="background-color: #d2d2ca;width: 50%;height: 1.5px;"></div>
+              </div>
+            </ion-col>
+            <ion-col>
+              <ion-datetime #endTime placeholder="结束" done-text="选择" cancel-text="取消"
+              monthShortNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"></ion-datetime>
+            </ion-col>
+          </ion-row>
+          
+        </ion-grid>
+        <ion-button style="width: 200px;margin-top: 10px;" (click)="searchHistoryBills()">
+          <ion-icon name="search-outline" style="margin-right: 5px;"></ion-icon>
+          <ion-label>查询</ion-label>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-card id="historyBillsCard" hidden>
+    <ion-card-header>
+      <ion-card-title>历史账单</ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content style="overflow-y: scroll;">
+        <ion-grid id="historyBillGrid">
+          <ion-row>
+            <ion-col style="font-weight: bold;">单号</ion-col>
+            <ion-col style="font-weight: bold;">桌号</ion-col>
+            <ion-col style="font-weight: bold;" size="4">时间</ion-col>
+            <ion-col style="font-weight: bold;">收入</ion-col>
+          </ion-row>                       
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col><a [routerLink]="['/serve-info']">12221</a></ion-col>
+            <ion-col>5</ion-col>
+            <ion-col style="display:block; text-align: center;" size="4">
+              <p>2021-01-02</p> 
+              <p>11:30:12</p>
+            </ion-col>
+            <ion-col>87</ion-col>
+          </ion-row>
+        </ion-grid>
+
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer id="historyBillFooter" hidden>
+  <ion-toolbar style="text-align: right;">
+    <ion-label style="font-size: 20px; margin-right: 5px;">总收入：</ion-label>
+    <ion-label id="totalBenefitLabel" style="font-size: 20px; margin-right: 20px; color:red; font-weight: bold;"></ion-label>
+  </ion-toolbar>
+</ion-footer>

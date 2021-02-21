@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/home"></ion-back-button>
+  </ion-buttons>
+    <ion-title>员工登录</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding acotContent">
+  <ion-item line="none">
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    <ion-label>账号</ion-label>
+    <ion-input type="text" maxlength="25" minlength="4" [(ngModel)]="userName"></ion-input>
+  </ion-item>
+
+  <ion-item line="none">
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-label>密码</ion-label>
+    <ion-input type="password" maxlength="25" minlength="4" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-item line="none" style="margin-top: 3px;">
+    <ion-icon name="shield-checkmark-outline" slot="start"></ion-icon>
+    <ion-label>验证码</ion-label>
+    <ion-input type="text" minlength="4" maxlength="4" [(ngModel)]="vertifyCode" required></ion-input>
+    <canvas id="verticalCode" style="width:100px;height:30px;" (click)="drawPic()" slot="end"></canvas>
+  </ion-item>
+
+  <div class="btnDiv">
+    <ion-button shape="round" (click)="doLogin()">
+      <p>登 录</p>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>HH订餐系统</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="width: 97%; text-align: center; background-color: #fdf6ec; 
+    padding-top: 5px; padding-bottom: 5px; border-radius: 10px; margin: 0 auto; margin-bottom: 1px;">
+    <ion-label style="color:#e6a23c; font-weight: 450;">欢迎使用HH订餐系统</ion-label>
+  </div>
+
+  <ion-slides id="slides_home" style="height: 28%; width: 97%; border-radius: 10px;">
+    <ion-slide>
+      <div id="weaDiv_hh">
+        <div id="he-plugin-standard" style="height: 100%;"></div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+
+  <div>
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <div id="customerDiv" style="margin-bottom: 10px;">
+            <ion-item lines="full">
+              <ion-icon src="../../assets/icon/menu.svg" slot="start"></ion-icon>
+              <ion-label>功能导航</ion-label>
+            </ion-item>
+
+            <ion-card style="box-shadow: none; -webkit-box-shadow:none;">
+              <ion-card-content>
+                <div [routerLink]="['/scan']" (click)="setUserType('customer')">
+                  <ion-avatar>
+                    <img src="../../assets/imgs/home/scan.png">
+                  </ion-avatar>
+                  <ion-label style="margin-top: 5px;">扫码订餐</ion-label>
+                </div>
+
+                <div [routerLink]="['/tabs/menus']" (click)="setUserType('viewer')">
+                  <ion-avatar>
+                    <img src="../../assets/imgs/home/viewer.png">
+                  </ion-avatar>
+                  <ion-label style="margin-top: 5px;">游客观览</ion-label>
+                </div>
+
+              </ion-card-content>
+            </ion-card>
+          </div>
+
+          <div id="workerDiv" style="margin-bottom: 10px;margin-top: 10px;">
+            <ion-item lines="full">
+              <ion-icon src="../../assets/icon/workerMenu.svg" slot="start"></ion-icon>
+              <ion-label>员工通道</ion-label>
+            </ion-item>
+            <ion-card id="oaCard_hh" style="box-shadow: none; -webkit-box-shadow:none;">
+              <ion-card-content>
+                <div [routerLink]="['/login']">
+                  <ion-avatar>
+                    <img src="../../assets/imgs/home/worker.png">
+                  </ion-avatar>
+                  <ion-label style="margin-top: 5px;">员工登录</ion-label>
+                </div>
+
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+</ion-content>

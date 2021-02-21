@@ -1,0 +1,48 @@
+.totalDiv{
+    height: 100%;
+    width: 100%;
+
+    .menuTypeDiv{
+        float: left;
+        width: 30%;
+        height: 100%;
+        overflow-y: scroll;
+
+        ion-list{
+            padding-top: 0px;
+
+            ion-label{
+                text-align: center;
+            }
+            ion-item{
+                --min-height:51px;
+            }
+        }
+
+        
+        
+    }
+    .middleLine{
+        float: left;
+        width: 2px;
+        height: 100%;
+        background-color: #ebdabb;
+    }
+    .menuListDiv{
+        float: left;
+        width: 69%;
+        height: 100%;
+        overflow-y: scroll;
+
+        ion-list{
+            padding-top: 0px;
+
+            // ion-label{
+            //     text-align: center;
+            // }
+            ion-item{
+                --min-height:51px;
+            }
+        }
+    }
+}

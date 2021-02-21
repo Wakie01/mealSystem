@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>菜单类型</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list style="padding: 0px;">
+    <!-- <ion-item-divider mode="ios">
+          <ion-label>所有</ion-label>
+        </ion-item-divider> -->
+
+    <ion-list-header style="background-color: #ebebeb;">
+      <ion-label>所有</ion-label>
+    </ion-list-header>
+
+    <div id="menutypeDiv">
+      <ion-item style="margin-top: 8px;padding-bottom: 2px;">
+        <ion-label style="margin-left: 3px;">
+          <div style="background-color: #5fd5d5;width: 17px; height: 17px; border-radius: 20px;"></div>
+        </ion-label>
+        <ion-input value="哈哈哈哈" readonly="true" style="margin-left: 20px;"></ion-input>
+        <ion-button color="warning" style="height: 34px; width: 37px;margin-bottom: 10px;">
+          <ion-icon name="settings-outline" style="height: 20px; width: 20px;"></ion-icon>
+          <!-- <ion-label style="font-size: 13px;">修改</ion-label> -->
+        </ion-button>
+
+        <ion-button color="success" disabled="true"
+          style="height: 34px; width: 37px;margin-left: 7px;margin-bottom: 10px;">
+          <ion-icon name="checkmark-outline" style="height: 20px; width: 20px;"></ion-icon>
+        </ion-button>
+
+        <ion-button color="danger" style="height: 34px; width: 37px;margin-left: 7px;margin-bottom: 10px;">
+          <ion-icon name="trash-outline" style="height: 20px; width: 20px;"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+
+      
+    </div>
+
+
+
+    <ion-list-header style="background-color: #ebebeb;">
+      <ion-label>新添</ion-label>
+      <ion-button color="secondary" (click)="initMenuAddHTML()">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-list-header>
+
+    <div id="menuAddDiv">
+      <!-- <ion-item style="margin-top: 8px;padding-bottom: 2px;">
+        <ion-label style="margin-left: 3px;">
+          <div style="background-color: #5fd5d5;width: 17px; height: 17px; border-radius: 20px;"></div>
+        </ion-label>
+        <ion-input value="哈哈哈哈" style="margin-left: 20px;"></ion-input>
+
+        <ion-button color="danger" style="height: 34px; width: 37px;margin-left: 7px;margin-bottom: 10px;">
+          <ion-icon name="trash-outline" style="height: 20px; width: 20px;"></ion-icon>
+        </ion-button>
+      </ion-item> -->
+
+      
+
+    </div>
+
+    <div id="menuAddBtn" style="text-align: center;margin: 25px 0px;" hidden>
+      <ion-button color="success" style="width: 40%;" (click)="saveMenuType()">
+        <ion-icon name="checkmark-outline" style="height: 25px; width: 25px;"></ion-icon>
+        <ion-label style="font-size: 14px;">新增全部</ion-label>
+      </ion-button>
+    </div>
+  </ion-list>
+
+
+</ion-content>

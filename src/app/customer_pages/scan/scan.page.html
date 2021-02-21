@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>扫码中..</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="{'qrScanner':isShow}">   
+  <div [ngClass]="{'qrScanner-area':isShow}"></div>   
+  <div [ngClass]="{'through-line':isShow}"></div>     
+  
+  <div class="button-bottom">
+    <ion-button color="light" (click)="toggleLight()" class="icon-camera">
+      <ion-icon name="flash-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="light" (click)="toggleCamera()" class="icon-camera">
+      <ion-icon name="camera-reverse-outline"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
