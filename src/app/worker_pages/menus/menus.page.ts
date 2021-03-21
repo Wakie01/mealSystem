@@ -160,7 +160,7 @@ export class MenusPage implements OnInit {
 
     let img = document.createElement("img");
     img.setAttribute("style","solid  1px #ddd9d9");
-    if(menu.image!=null){
+    if(menu.image!=null && menu.image!=""){
       img.src = this.http.server+"menuImage/"+menu.image;
     }
     

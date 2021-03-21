@@ -50,6 +50,18 @@ export class BillInfoPage implements OnInit {
       rowNodes[i].remove();
     }
 
+    //已完成订单时
+    let billId=window.sessionStorage.getItem("billId");
+    if(billId!=null){
+      let orderTime=window.sessionStorage.getItem("orderTime");
+      let deskId=window.sessionStorage.getItem("deskId");
+      document.getElementById("serveInfoDiv").hidden = false;
+      document.getElementById("serveInfoDiv").querySelector("ion-button").onclick = () => {
+        this.navController.navigateRoot(['/serve-info'],
+        { queryParams: { billId: billId, deskId: deskId, orderTime: orderTime } });
+      }
+    }
+
     //购物车没东西时
     if (MenusPage.shoppingCar.size == 0) {
       let ionRow = document.createElement("ion-row");
@@ -119,8 +131,10 @@ export class BillInfoPage implements OnInit {
       billInfoGrid.append(ionRow);
 
       this.totalPrice += value.totalPrice;
-
+      
     });
+
+    
   }
 
   /**
@@ -208,8 +222,9 @@ export class BillInfoPage implements OnInit {
     document.getElementById("serveInfoDiv").hidden = false;
 
     this.billId = receiveData.data.billId;
-    window.sessionStorage.setItem("billId", this.billId);
     let orderTime = receiveData.data.orderTime;
+    window.sessionStorage.setItem("billId", this.billId);
+    window.sessionStorage.setItem("orderTime", orderTime);
     document.getElementById("serveInfoDiv").querySelector("ion-button").onclick = () => {
       this.navController.navigateRoot(['/serve-info'],
       { queryParams: { billId: this.billId, deskId: window.sessionStorage.getItem("deskId"), orderTime: orderTime } });
